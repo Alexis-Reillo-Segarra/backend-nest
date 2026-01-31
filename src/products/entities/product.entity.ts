@@ -9,7 +9,7 @@ export class Product {
     @Column('varchar', { length: 255 })
     title: string;
 
-    @Column('text')
+    @Column('text', { nullable: true })
     description: string;
 
     @Column('varchar', { length: 255, unique: true })
