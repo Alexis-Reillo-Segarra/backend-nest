@@ -27,10 +27,12 @@
 npm i
 ```
 
-2. Instanciar la BBDD (revisa que has creado el archivo <b>.env</b> basado en <b>.env.template</b>)
+2. Clonar el archivo `.env.template ` y renombrarlo a `.env `
+
+3. Instanciar la BBDD
 
 ```
 docker compose up -d
 ```
 
-3.
+4.
