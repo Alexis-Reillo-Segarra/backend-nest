@@ -21,6 +21,12 @@ export class Product {
     @Column('int', { default: 0 })
     stock: number;
 
+    @Column('text', {
+        array: true,
+        default: []
+    })
+    tags: string[];
+
     // tags
     // images
 
