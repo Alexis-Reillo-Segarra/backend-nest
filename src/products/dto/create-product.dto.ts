@@ -13,7 +13,8 @@ export class CreateProductDto {
 
     @IsString()
     @MinLength(1)
-    slug: string;
+    @IsOptional()
+    slug?: string;
 
     @IsNumber()
     @IsPositive()

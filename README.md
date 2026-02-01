@@ -35,4 +35,9 @@ npm i
 docker compose up -d
 ```
 
-4.
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div style="display: flex; justify-content:center;">
+  <img alt="Icono animado de Eelektross" 
+       src="https://images2.wikidexcdn.net/mwuploads/wikidex/e/eb/latest/20101006000302/Eelektross_icon.gif" >
+</div>
