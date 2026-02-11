@@ -1,33 +1,42 @@
 import { BeforeInsert, BeforeUpdate, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { ProductImage } from ".";
+import { ApiProperty } from "@nestjs/swagger";
 
 @Entity()
 export class Product {
 
+    @ApiProperty()
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
+    @ApiProperty()
     @Column('varchar', { length: 255 })
     title: string;
 
+    @ApiProperty()
     @Column('text', { nullable: true })
     description: string;
 
+    @ApiProperty()
     @Column('varchar', { length: 255, unique: true })
     slug: string;
 
+    @ApiProperty()
     @Column('decimal', { default: 0 })
     price: number;
 
+    @ApiProperty()
     @Column('int', { default: 0 })
     stock: number;
 
+    @ApiProperty()
     @Column('text', {
         array: true,
         default: []
     })
     tags: string[];
 
+    @ApiProperty()
     @OneToMany(
         () => ProductImage,
         productImage => productImage.product,
