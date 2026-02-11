@@ -6,6 +6,8 @@ import { type Response } from 'express';
 import { fileFilter, fileNamer } from './helpers';
 import { FilesService } from './files.service';
 import { ConfigService } from '@nestjs/config';
+import { ValidRoles } from 'src/auth/interfaces';
+import { Auth } from 'src/auth/decorators';
 
 @Controller('files')
 export class FilesController {
@@ -15,6 +17,7 @@ export class FilesController {
   ) { }
 
   @Post('product')
+  @Auth(ValidRoles.admin)
   @UseInterceptors(FileInterceptor('file', {
     fileFilter: fileFilter,
     storage: diskStorage({
